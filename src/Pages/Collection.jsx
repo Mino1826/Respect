@@ -3,6 +3,7 @@ import { ShopContext } from "../Context/ShopContext";
 // import { assets } from "../assets/assets";
 import Title from "../Components/Title";
 import ProductItem from "../Components/ProductItem";
+import Delivery from "../Components/Delivery";
 
 const Collection = () => {
   const { products , search , showSearch } = useContext(ShopContext);
@@ -186,6 +187,7 @@ const Collection = () => {
           ))}
         </div>
       </div>
+      
     </div>
   );
 };

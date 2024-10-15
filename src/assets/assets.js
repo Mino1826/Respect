@@ -27,6 +27,7 @@ import support_img from "./support_img.png";
 import menu_icon from "./menu_icon.png";
 import aboutHome from "./aboutHome.jpg";
 import about from "./about.png";
+import contact from "./contact_us.jpg";
 
 
 export const assets = {
@@ -45,6 +46,7 @@ export const assets = {
   menu_icon,
   aboutHome,
   about,
+  contact
 };
 
 export const products = [

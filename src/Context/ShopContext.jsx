@@ -1,57 +1,38 @@
 import { createContext, useState } from "react";
 import { products } from "../assets/assets";
+import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 
 export const ShopContext = createContext();
 
-
 const ShopContextProvider = (props)=>{
 
     const currency = 'تومان';
-    const delivery_fee = 45;
+    const delivery_fee = 10;
     const [search, setSearch] = useState('');
     const [showSearch, setShowSearch] = useState(false);
     const [cartItems, setCartItems] = useState({});
     const navigate = useNavigate()
 
-    const addToCart = async (itemId)=>{
-
-       
-
+    const addToCart = async (itemId) => {
         let cartData = structuredClone(cartItems);
-
+    
+     
         if (cartData[itemId]) {
-            if (cartData[itemId]) {
-                cartData[itemId] += 1;
-            }else{
-                cartData[itemId]= 1;
-            }
-            
+            cartData[itemId] += 1;
+        } else {
+            cartData[itemId] = 1; 
         }
-        else{
-            cartData[itemId] = {};
-            cartData[itemId]= 1;
-        }
+        
         setCartItems(cartData);
-
+        toast.success("محصول با موفقیت به سبد خرید اضافه شد!");  
+        console.log(addToCart)
     }
-
-    const getCartCount = ()=>{
-
+    const getCartCount = () => {
         let totalCount = 0;
-
-        for(const items in cartItems){
-            for(const item in cartItems[items]){
-                try {
-                    if (cartItems[items][item] > 0) {
-                        totalCount += cartItems[items][item];
-                        
-                    }
-                    
-                } catch (error) {
-                    console.error(error)
-                }
-
+        for(const itemId in cartItems){
+            if (cartItems[itemId] > 0) {
+                totalCount += cartItems[itemId];
             }
         }
         return totalCount;
@@ -86,12 +67,6 @@ const ShopContextProvider = (props)=>{
 
         
     }
-    const scrollToTop= ()=>{
-        window.scroll({
-          top:0,
-          behavior: 'smooth'
-        })
-      }
 
 
     const value = {
@@ -101,11 +76,8 @@ const ShopContextProvider = (props)=>{
         getCartCount,updateQuantity,
         getCartAmount,
         navigate,
-        scrollToTop,
 
     }
-
-    
 
     return(
         <ShopContext.Provider value={value}>

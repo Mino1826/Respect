@@ -2,6 +2,7 @@ import Title from '../Components/Title';
 
 import { motion } from 'framer-motion';
 import { assets } from '../assets/assets';
+import Delivery from '../Components/Delivery';
 
 const About = () => {
 
@@ -86,7 +87,7 @@ const About = () => {
           className='border border-gray-300 rounded-lg p-6 flex flex-col gap-5 bg-white shadow-md transform hover:scale-105 hover:shadow-lg'
         >
           <b>راحتی:</b>
-          <p className='text-gray-600'>با رابط کاربری ساده و فرایند سفارش بدون دردسر ما، خرید کردن هیچ‌گاه آسان‌تر نبوده است.</p>
+          <p className='text-gray-600'>با یک رابط کاربری ساده و فرایند سفارش بدون پیچیدگی، خرید هرگز به این راحتی نبوده است.</p>
         </motion.div>
 
         <motion.div
@@ -100,6 +101,7 @@ const About = () => {
           <p className='text-gray-600'>تیم حرفه‌ای و اختصاصی ما همواره آماده خدمت‌رسانی به شما است تا اطمینان حاصل کنیم که رضایت شما اولویت اصلی ما است.</p>
         </motion.div>
       </div>
+      <Delivery/>
     </div>
   );
 }

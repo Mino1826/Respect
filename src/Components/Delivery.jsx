@@ -2,7 +2,7 @@ import Title from "./Title";
 
 const Delivery = () => {
     return (
-      <div className="mt-10 p-6 bg-customGray rounded-lg shadow-2xl text-center">
+      <div className="mt-18 mb-10 p-6 bg-customGray rounded-lg shadow-2xl text-center">
         <Title text1={'مدت زمان و'} text2={'نحوه ارسال'}/>
        
         
