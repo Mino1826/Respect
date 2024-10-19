@@ -1,9 +1,11 @@
-import { useContext, useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react";
 import { ShopContext } from "../Context/ShopContext";
+import { useTranslation } from "react-i18next";
 import Title from '../Components/Title';
 import ProductItem from '../Components/ProductItem';
 
 const RelatedProducts = ({ category, subCategory }) => {
+    const { t } = useTranslation();
     const { products } = useContext(ShopContext);
     const [related, setRelated] = useState([]);
 
@@ -20,7 +22,7 @@ const RelatedProducts = ({ category, subCategory }) => {
     return (
         <div className="mx-6">
             <div className="text-center text-3xl py-2">
-                <Title text1={'محصولات '} text2={'مرتبط'} />
+                <Title text1={t('relatedProducts')} text2={t('products')} />
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 gap-y-6">
                 {
@@ -31,7 +33,7 @@ const RelatedProducts = ({ category, subCategory }) => {
                 }
             </div>
         </div>
-    )
+    );
 }
 
 export default RelatedProducts;

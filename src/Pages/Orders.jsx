@@ -1,14 +1,16 @@
 import { useContext } from "react";
 import { ShopContext } from "../Context/ShopContext";
 import Title from "../Components/Title";
+import { useTranslation } from 'react-i18next'; // وارد کردن useTranslation
 
 const Orders = () => {
+  const { t } = useTranslation(); // استفاده از useTranslation
   const { products, currency } = useContext(ShopContext);
 
   return (
-    <div className="bg-customGray border-t pt-16 ">
+    <div className="bg-customGray border-t pt-16">
       <div className="text-2xl flex justify-center">
-        <Title text1={"سفارشات"} text2={"من"} />
+        <Title text1={t("my_orders")} text2={t("ordersMe")} /> {/* استفاده از تابع t برای ترجمه */}
       </div>
 
       <div>
@@ -25,20 +27,18 @@ const Orders = () => {
                   <p className="text-lg">
                     {currency} 
                     <span>{item.price} </span>
-                    
                   </p>
-                  <p>تعداد: ۱</p>
+                  <p>{t("quantity")}: 1</p> {/* استفاده از تابع t برای ترجمه */}
                 </div>
-                
               </div>
             </div>
             <div className="md:w-1/2 flex justify-between">
               <div className="flex items-center gap-2">
                 <p className="min-w-2 h-2 rounded-full bg-green-500"></p>
-                <p className="text-sm md:text-base">آماده ارسال</p>
+                <p className="text-sm md:text-base">{t("ready_to_ship")}</p> {/* استفاده از تابع t برای ترجمه */}
               </div>
               <button className="border px-4 py-2 text-sm font-medium rounded-sm">
-                پیگیری سفارش
+                {t("track_order")} {/* استفاده از تابع t برای ترجمه */}
               </button>
             </div>
           </div>

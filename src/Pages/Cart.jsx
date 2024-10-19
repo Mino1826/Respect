@@ -3,12 +3,14 @@ import { ShopContext } from "../Context/ShopContext";
 import Title from "../Components/Title";
 import { assets } from "../assets/assets";
 import CartTotal from "../Components/CartTotal";
+import { useTranslation } from 'react-i18next'; 
 
 const Cart = () => {
+  const { t } = useTranslation(); 
   const { products, currency, cartItems, updateQuantity, navigate } =
     useContext(ShopContext);
 
-  console.log(cartItems); // بررسی مقدار cartItems
+  console.log(cartItems); 
 
   const [cartData, setCartData] = useState([]);
 
@@ -27,13 +29,13 @@ const Cart = () => {
       }
     }
     setCartData(tempData);
-    console.log(tempData); // بررسی داده‌های جمع‌آوری شده
+    console.log(tempData); 
   }, [cartItems]);
 
   return (
     <div className="bg-customGray border-t pt-14">
       <div className="flex justify-center text-2xl mb-3">
-        <Title text1={"سبد"} text2={"خرید شما"} />
+        <Title text1={t("yourCart")} text2={t("title")} />
       </div>
 
       <div>
@@ -42,7 +44,7 @@ const Cart = () => {
             (product) => product._id === item._id
           );
 
-          if (!productData) return null; // اگر محصول پیدا نشود، چیزی نشان ندهید
+          if (!productData) return null; 
 
           return (
             <div
@@ -82,7 +84,7 @@ const Cart = () => {
                 onClick={() => updateQuantity(item._id, 0)}
                 className="w-4 mr-4 sm:w-5 cursor-pointer"
                 src={assets.bin_icon}
-                alt="حذف"
+                alt={t("remove")} 
               />
             </div>
           );
@@ -97,7 +99,7 @@ const Cart = () => {
               onClick={() => navigate("/place-order")}
               className="bg-black text-white text-sm my-8 px-8 py-3 mx-8"
             >
-              ادامه خرید
+              {t("continueShopping")} 
             </button>
           </div>
         </div>

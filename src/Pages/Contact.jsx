@@ -1,10 +1,11 @@
-// import { assets } from "../assets/assets"
 import { assets } from "../assets/assets";
-
-import Title from "../Components/Title";
 import { FaInstagram, FaTelegram, FaWhatsapp } from "react-icons/fa";
+import Title from "../Components/Title";
+import { useTranslation } from 'react-i18next'; 
 
 const Contact = () => {
+  const { t } = useTranslation(); 
+
   const onSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
@@ -20,7 +21,6 @@ const Contact = () => {
 
     if (data.success) {
       alert(data.message);
-
       event.target.reset();
     } else {
       console.log("Error", data);
@@ -30,11 +30,11 @@ const Contact = () => {
   return (
     <div className="bg-customGray p-8">
       <div className="text-center text-2xl pt-10 border-t border-gray-300">
-        <Title text1={"ارتباط"} text2={"با ما"} />
+        <Title text1={t("contact")} text2={t("us")} /> 
       </div>
 
       <div className="my-10 flex flex-col justify-center md:flex-row gap-10 mb-18">
-        {/* تصویر (می‌توانید آدرس تصویر را اضافه کنید) */}
+        
         <img
           className="w-full md:max-w-[480px] rounded-lg shadow-md h-[500px]"
           src={assets.contact}
@@ -43,21 +43,18 @@ const Contact = () => {
 
         <div className="flex flex-col justify-center items-start gap-6 md:w-2/4">
           <p className="font-semibold text-xl text-gray-800">
-            ما به ارتباط با مشتریان و ایجاد ارتباط نزدیک با آنها اعتقاد داریم.
-            هدف ما این است که با شما در تماس باشیم و به نیازها و نظرات شما توجه
-            کنیم.
+            {t("customer_relationship")}
           </p>
 
-          <h3 className="font-semibold text-xl text-gray-600">اطلاعات تماس</h3>
+          <h3 className="font-semibold text-xl text-gray-600">{t("contact_information")}</h3>
           <p className="text-gray-500">
-            Tel: 09353176649
-            <br /> Email: mino.khosravi2025@gmail.com
+            {t("tel")}
+            <br /> {t("emailContact")}
           </p>
-          <p className="text-gray-500">زمان پاسخگویی : ۱۰ الی ۱۸</p>
+          <p className="text-gray-500">{t("response_time")}</p>
 
           <p className="text-gray-500">
-            اگر سوالی دارید یا نیاز به کمک دارید، لطفاً با ما تماس بگیرید. تیم
-            ما همواره آماده پاسخگویی به شماست.
+            {t("questions")}
           </p>
 
           <div className="flex gap-4 mt-4">
@@ -88,24 +85,24 @@ const Contact = () => {
           </div>
         </div>
       </div>
+
       <form
         onSubmit={onSubmit}
         className="space-y-4 w-[80%] mx-auto p-6 bg-customGray"
       >
         <div>
-
           <label
             htmlFor="name"
             className="block text-right font-medium text-gray-700"
           >
-            نام شما
+            {t("your_name")} 
           </label>
           <input
             type="text"
             id="name"
             name="name"
-            placeholder="نام خود را وارد کنید"
-            className="mt-1 block w-full p-2 border border-gray-300  focus:ring-black focus:border-black sm:text-sm"
+            placeholder={t("enter_your_name")} 
+            className="mt-1 block w-full p-2 border border-gray-300 focus:ring-black focus:border-black sm:text-sm"
             required
           />
         </div>
@@ -115,13 +112,13 @@ const Contact = () => {
             htmlFor="email"
             className="block text-right font-medium text-gray-700"
           >
-            ایمیل شما
+            {t("your_email")} 
           </label>
           <input
             type="email"
             id="email"
             name="email"
-            placeholder="ایمیل خود را وارد کنید"
+            placeholder={t("enter_your_email")} 
             className="mt-1 block w-full p-2 border border-gray-300 focus:ring-black focus:border-black sm:text-sm"
             required
           />
@@ -132,13 +129,13 @@ const Contact = () => {
             htmlFor="message"
             className="block text-right font-medium text-gray-700"
           >
-            پیام خود را اینجا بنویسید
+            {t("write_your_message")} 
           </label>
           <textarea
             id="message"
             name="message"
             rows="5"
-            placeholder="پیام خود را وارد کنید"
+            placeholder={t("enter_your_message")} 
             className="mt-1 block w-full p-2 border border-gray-300 focus:ring-black focus:border-black sm:text-sm"
             required
           ></textarea>
@@ -146,9 +143,9 @@ const Contact = () => {
 
         <button
           type="submit"
-          className="w-full py-2 px-4 bg-black text-white font-semibold focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-75"
+          className="w-full py-2 px-4 bg-black text-white font-semibold focus:outline-none "
         >
-          ارسال
+          {t("submit")} 
         </button>
       </form>
     </div>

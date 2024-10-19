@@ -1,18 +1,17 @@
 import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { ShopContext } from "../Context/ShopContext";
-import { assets } from "../assets/assets";
 import RelatedProducts from "../Components/RelatedProducts";
+import { useTranslation } from "react-i18next"; // Import useTranslation
 
 const Product = () => {
-
   const { productId } = useParams();
-  const { products, currency, addToCart } = useContext(ShopContext);
+  const { products, currency, addToCart, language } = useContext(ShopContext); // Get language from context
+  const { t } = useTranslation(); // Initialize translation function
   const [productData, setProductData] = useState(false);
   const [image, setImage] = useState('');
 
   const fetchProductData = async () => {
-
     products.map((item) => {
       if (item._id === productId) {
         setProductData(item);
@@ -20,7 +19,6 @@ const Product = () => {
         return null;   
       }
     });
-
   }
 
   useEffect(() => {
@@ -47,34 +45,28 @@ const Product = () => {
 
         <div className="flex-1">
           <h1 className="font-medium text-2xl mt-2">{productData.name}</h1>
-          {/* <div className="flex items-center gap-1 mt-2">
-            <img src={assets.star_icon} alt="" className="w-3 5" />
-            <img src={assets.star_icon} alt="" className="w-3 5" />
-            <img src={assets.star_icon} alt="" className="w-3 5" />
-            <img src={assets.star_icon} alt="" className="w-3 5" />
-            <img src={assets.star_dull_icon} alt="" className="w-3 5" />
-            <p className="pl-2">(122)</p>
-          </div> */}
+         
           <p className="mt-5 text-3xl font-medium">{currency}{productData.price}</p>
           <p className="mt-5 text-gray-500 md:w-4/5">{productData.description}</p>
          
-          <button onClick={() => addToCart(productData._id)} className="bg-black text-white px-8 py-3 mt-4 text-sm active:bg-gray-700">افزودن به سبد خرید</button>
+          <button onClick={() => addToCart(productData._id)} className="bg-black text-white px-8 py-3 mt-4 text-sm active:bg-gray-700">
+            {t('product.add_to_cart')}
+          </button>
           <hr className="mt-8 sm:w-4/5"/>
           <div className="text-sm text-gray-500 mt-5 flex flex-col gap-1">
-            <p>شمع‌های ما 100% دست‌ساز و طبیعی هستند.</p>
-            <p>سیاست بازگشت و تعویض آسان در مدت 7 روز.</p>
+            <p>{t('product.handmade_description')}</p>
+           
           </div>
         </div> 
       </div>
 
       <div className="mt-20">
         <div className="flex">
-          <b className="border px-5 py-3 text-sm">توضیحات</b>
-          
+          <b className="border px-5 py-3 text-sm">{t('product.description')}</b>
         </div>
         <div className="flex flex-col gap-4 border px-6 py-6 text-sm text-gray-500">
-          <p>شمع‌های دست‌ساز ما با استفاده از مواد با کیفیت و طبیعی ساخته شده‌اند. هر شمع به‌طور منحصر به‌ فرد طراحی شده است و عطر و نوری گرم و دلنشین را به خانه شما می‌آورد.</p>
-          <p>محصولات ما شامل انواع مختلف شمع‌های معطر و تزئینی است که مناسب برای هر مناسبتی هستند.</p>
+          <p>{t('product.handmade_description')}</p>
+          <p>{t('product.products_description')}</p>
         </div>
       </div>
 
@@ -82,7 +74,6 @@ const Product = () => {
 
     </div>
   ) : <div className="opacity-0"></div>
-
 }
 
 export default Product;

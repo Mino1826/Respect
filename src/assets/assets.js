@@ -30,6 +30,8 @@ import about from "./about.png";
 import contact from "./contact_us.jpg";
 
 
+
+
 export const assets = {
   logo,
   hero_img,
@@ -49,12 +51,13 @@ export const assets = {
   contact
 };
 
+
 export const products = [
   {
     _id: "aaaaa",
     name: "شمع",
     description:
-      "با عطر دلنشین یاسمن، این شمع فضایی آرامش‌بخش و مطبوع به خانه شما می‌بخشد",
+      "این شمع دست‌ساز با عشق و دقت ساخته شده و از بهترین مواد طبیعی تهیه شده است",
     price: 100,
     image: [p_img1],
     category: "new",
@@ -64,14 +67,14 @@ export const products = [
   },
   {
     _id: "aaaab",
-    name: "شمع",
+    name:"شمع",
     description:
       "این شمع دست‌ساز با عشق و دقت ساخته شده و از بهترین مواد طبیعی تهیه شده است",
     price: 200,
     image: [p_img2],
     category: "new",
     subCategory: "ghalami",
-    date: new Date('2023-09-05').getTime(), // 14 شهریور 1402
+    date: new Date('2023-09-05').getTime(), 
     bestseller: true,
   },
   {
