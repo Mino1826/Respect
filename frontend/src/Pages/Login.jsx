@@ -29,6 +29,10 @@ const Login = () => {
             <p onClick={() => setCurrentState(t('login'))} className="cursor-pointer">{t('login_to_account')}</p>
           )}
         </div>
+        <div className="flex py-2">
+          <input type="checkbox" className="flex-0 mr-2" required />
+          <p className="flex-1 text-sm">{t('agree_terms')}</p>
+        </div>
         <button className="bg-black text-white font-light px-8 py-2 mt-4 mb-4">{currentState === t('login') ? t('login_button') : t('register_button')}</button>
       </form>
     </div>

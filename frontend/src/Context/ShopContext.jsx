@@ -8,12 +8,6 @@ import { useTranslation } from "react-i18next";
 export const ShopContext = createContext();
 
 const ShopContextProvider = (props) => {
-
-    
-       
-    
-
-
     const { t } = useTranslation();  
     const currency = t('currency'); 
     const delivery_fee = 10; 
@@ -22,10 +16,6 @@ const ShopContextProvider = (props) => {
     const [cartItems, setCartItems] = useState({});
     
     const navigate = useNavigate();
-
- 
-   
-
     const addToCart = async (itemId) => {
         let cartData = structuredClone(cartItems);
 
