@@ -1,69 +1,93 @@
-import {v2 as cloudinary} from 'cloudinary'
-import productModel from '../models/productModel.js'
+import { v2 as cloudinary } from "cloudinary";
+import productModel from "../models/productModel.js";
 
-//add product
-export const addProduct = async(req,res) =>{
+// add product
+export const addProduct = async (req, res) => {
+  try {
+    const { name, description, price, category, subCategory, bestseller } = req.body;
 
-    try {
-        const{name,description,price,category,subCategory,bestseller} = req.body
+    // اگر با multer.fields آپلود کردی، فایل‌ها تو req.files میان
+    const image1 = req.files?.image1?.[0];
+    const image2 = req.files?.image2?.[0];
+    const image3 = req.files?.image3?.[0];
+    const image4 = req.files?.image4?.[0];
 
-        const image1 =req.file.image1 && req.files.image1[0]
-        const image2 =req.file.image2 && req.files.image2[0]
-        const image3 =req.file.image3 && req.files.image3[0]
-        const image4 =req.file.image4 && req.files.image4[0]
+    const images = [image1, image2, image3, image4].filter(Boolean);
 
-        const images = [image1,image2,image3,image4].filter((item)=> item !== undefined)
+    // آپلود به کلودینری (فرض بر اینه که قبلاً cloudinary.config(...) رو انجام دادی)
+    const imagesUrl = await Promise.all(
+      images.map(async (item) => {
+        const result = await cloudinary.uploader.upload(item.path, {
+          resource_type: "image",
+        });
+        return result.secure_url;
+      })
+    );
 
-        let imagesUrl = await Promise.all(
-            images.map(async(item)=>{
-                let result = await cloudinary.uploader.upload(item.path, {resource_type:'image'});
-                return result.secure_url
+    const productData = {
+      name,
+      description,
+      category,
+      subCategory,
+      price: Number(price),
+      bestseller: bestseller === "true" || bestseller === true,
+      image: imagesUrl,
+      date: Date.now(),
+    };
 
-            })
-        )
+    const product = new productModel(productData);
+    await product.save();
 
-        const productData = {
-            name,
-            description,
-            category,
-            subCategory,
-            price: Number(price),
-            bestseller: bestseller === 'true' ? true : false,
-            image:imagesUrl,
-            date: Date.now()
-        }
+    return res.status(201).json({ success: true, message: "product added", product });
+  } catch (error) {
+    console.error(error);
+    return res.status(500).json({ success: false, message: error.message });
+  }
+};
 
-        console.log(productData);
+// list products
+export const listProducts = async (req, res) => {
+  try {
+    const products = await productModel.find({});
+    return res.json({ success: true, products });
+  } catch (error) {
+    console.error(error);
+    return res.status(500).json({ success: false, message: error.message });
+  }
+};
 
-        const product = new productModel(productData);
-        
+// remove product
+export const removeProduct = async (req, res) => {
+  try {
+    const { id } = req.body;           // چون روتت POST /remove هست
+    if (!id) return res.status(400).json({ success: false, message: "id is required" });
 
+    await productModel.findByIdAndDelete(id);
+    return res.json({ success: true, message: "product removed" });
+  } catch (error) {
+    console.error(error);
+    return res.status(500).json({ success: false, message: error.message });
+  }
+};
 
-    } catch (error) {
-        console.log(error);
-        
-        res.json({success:false,message:error.message})
-    }
+// single product info
+export const singleProduct = async (req, res) => {
+  try {
+    const { id } = req.body;           // روتت POST /single هست؛ اگر GET گرفتی از req.params.id بگیر
+    if (!id) return res.status(400).json({ success: false, message: "id is required" });
 
-}
-//list product
-export const listProducts = async(req,res) =>{
+    const product = await productModel.findById(id);
+    if (!product) return res.status(404).json({ success: false, message: "product not found" });
 
-}
-//remove product
-export const removeProduct = async(req,res) =>{
+    return res.json({ success: true, product });
+  } catch (error) {
+    console.error(error);
+    return res.status(500).json({ success: false, message: error.message });
+  }
+};
 
-}
-//single product info
-export const singleProduct = async(req,res) =>{
-
-}
 
 // export default {listProducts, addProduct, removeProduct, singleProduct};
-
-
-
-
 
 // import asyncHandler from 'express-async-handler';
 // import Product from '../models/Product.js';
@@ -110,4 +134,3 @@ export const singleProduct = async(req,res) =>{
 //   await product.deleteOne();
 //   res.json({ message: 'Product removed' });
 // });
-
