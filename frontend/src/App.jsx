@@ -15,9 +15,13 @@ import Footer from "./Components/Footer";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Delivery from "./Components/Delivery";
- 
 import i18n from './Components/I18n';
-i18n
+import B2B from './Pages/B2B';
+import Gifts from './Pages/Gifts';
+import Terms from './Pages/Terms';
+import OrderTracking from './Pages/Ordertracking';
+
+
 
 
 const App = () => {
@@ -40,9 +44,17 @@ const App = () => {
         <Route path="/place-order" element={<PlaceOrder/>}/>
         <Route path="/orders" element={<Orders/>}/>
         <Route path="/delivery" element={<Delivery/>}/>
+        <Route path="/b2b" element={<B2B/>}/>
+        <Route path="/gifts" element={<Gifts/>}/>
+        <Route path="/terms" element={<Terms/>}/>
+        <Route path="/track-order" element={<OrderTracking/>}/>
+        
+        
+        
       </Routes>
       <hr className="border-gray-400 flex items-center " />
       <Footer/>
+      
     </div>
   );
 }

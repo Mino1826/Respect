@@ -3,6 +3,7 @@
   "collection": "Collection",
   "about": "About Us",
   "contact_us": "Contact Us",
+  "b2b": "Bulk Orders",
   "account": "Account",
   "orders": "Orders",
   "login": "Login",
@@ -12,232 +13,347 @@
   "home_decor": "Home Decor",
   "respect": "RESPECT",
   "best": "Seller ",
-  "seller":"Best",
+  "seller": "Best",
   "bestseller_description": "Our most popular products that have been well received by customers! These products not only offer high quality and beautiful design but also provide a delightful and unique experience for you. Don't miss the best",
   "no_product": "No products available",
 
-    "total": "Cart",
-    "cart": "Total",
-    "shipping": "Shipping",
-    "subtotal": "Subtotal",
+  "total": "Cart",
+  "cart": "Total",
+  "shipping": "Shipping",
+  "subtotal": "Subtotal",
+  "shippingMethod": {
+    "flat_rate15": "Shipping by post to cities and Tehran",
+    "flat_rate22": "Snapbox shipping (cost is cash on delivery). For delivery time after placing the order, please send a message via direct or WhatsApp.",
+    "flat_rate23": "Tipax shipping cash on delivery (packaging cost is 10,000 Toman). Delivery cost depends on the weight of the package and the distance from Tehran and usually starts from 70,000 Toman."
+  },
+  "finalTotal": "Final Total",
+
+  "delivery": {
+    "title": "Delivery Time and Method",
+    "shipping_Method": "Shipping Method",
+    "shippingDescription": "Your products will be shipped via expedited or regular post. Depending on the type of product and your choice, we provide the best shipping method.",
+    "deliveryTime": "Delivery Time",
+    "expressShipping": "Expedited Post: 1 to 3 working days",
+    "regularShipping": "Regular Post: 6 to 8 working days",
+    "deliveryDisclaimer": "Delivery times depend on your location and conditions. In case of any delays, we will inform you.",
+    "notice": "Notice:",
+    "contact": "If you have any questions or need more information, please contact us so we can assist you."
+  },
+
+  "time": "Delivery Time",
+  "method": "Shipping Method",
+  "shippingMethodTitle": "Shipping Method",
+  "shippingDescription": "Your products will be shipped via expedited or regular post. Depending on the type of product and your choice, we provide the best shipping method.",
+  "deliveryTimeTitle": "Delivery Time",
+  "expressShipping": "Expedited Post: 1 to 3 working days",
+  "regularShipping": "Regular Post: 6 to 8 working days",
+  "timeDisclaimer": "Delivery times depend on your location and conditions. In case of any delays, we will inform you.",
+  "noticeTitle": "Notice:",
+  "contactInfo": "If you have any questions or need more information, please contact us so we can assist you.",
+
+  "links": "Links",
+
+  "products": "Products",
+
+  "contact": "Contact Us",
+
+  "contactInfo_footer": "Contact Information",
+  "phone": "Phone",
+  "email": "Email",
+  "rights": "All rights reserved for Respect store",
+
+  "subscribeNow": "Subscribe Now",
+  "newsletterInfo": "Stay updated with the latest news, discounts, and special offers.",
+  "enterEmail": "Enter your email",
+  "subscribe": "Subscribe",
+  "privacyPolicy": "We respect your privacy and will only use your email for sending useful information",
+
+  "relatedProducts": "Related",
+
+  "currency": "Toman",
+
+  "addedSuccess": "Product successfully added to the cart!",
+
+  "title1": "About",
+  "title2": "Us",
+  "description1": "We create unique handmade products with love and care. From the very beginning, our goal has been to bring a sense of peace and beauty to your homes. Every product we make is crafted with attention to detail and the best materials.",
+  "description2": "Our team is made up of motivated and creative individuals, each contributing with passion and energy to create products that not only bring you beauty but also enrich your daily life with good feelings and tranquility.",
+  "goalTitle": "Our Goal",
+  "goalDescription": "We believe in quality, innovation, and respect for the environment, and we strive to provide you with not just excellent products, but a unique experience using natural materials and sustainable processes.",
+  "whyChoose": {
+    "title1": "Why",
+    "title2": "Choose Us"
+  },
+  "qualityGuarantee": {
+    "title": "Quality Guarantee:",
+    "description": "We carefully select and review each product to ensure it meets our high-quality standards."
+  },
+  "convenience": {
+    "title": "Convenience:",
+    "description": "With a simple user interface and a hassle-free ordering process, shopping has never been this easy."
+  },
+  "excellentCustomerService": {
+    "title": "Excellent Customer Service:",
+    "description": "Our dedicated and professional team is always ready to assist you to ensure your satisfaction is our top priority."
+  },
+
+  "delivery": {
+    "title1": "Delivery Time and",
+    "title2": "Shipping Method",
     "shippingMethod": {
-      "flat_rate15": "Shipping by post to cities and Tehran",
-      "flat_rate22": "Snapbox shipping (cost is cash on delivery). For delivery time after placing the order, please send a message via direct or WhatsApp.",
-      "flat_rate23": "Tipax shipping cash on delivery (packaging cost is 10,000 Toman). Delivery cost depends on the weight of the package and the distance from Tehran and usually starts from 70,000 Toman."
-   },
-    "finalTotal": "Final Total",
-    
-      "delivery": {
-        "title": "Delivery Time and Method",
-        "shipping_Method": "Shipping Method",
-        "shippingDescription": "Your products will be shipped via expedited or regular post. Depending on the type of product and your choice, we provide the best shipping method.",
-        "deliveryTime": "Delivery Time",
-        "expressShipping": "Expedited Post: 1 to 3 working days",
-        "regularShipping": "Regular Post: 6 to 8 working days",
-        "deliveryDisclaimer": "Delivery times depend on your location and conditions. In case of any delays, we will inform you.",
-        "notice": "Notice:",
-        "contact": "If you have any questions or need more information, please contact us so we can assist you."
-      },
-      
-       
-          "time": "Delivery Time",
-          "method": "Shipping Method",
-          "shippingMethodTitle": "Shipping Method",
-          "shippingDescription": "Your products will be shipped via expedited or regular post. Depending on the type of product and your choice, we provide the best shipping method.",
-          "deliveryTimeTitle": "Delivery Time",
-          "expressShipping": "Expedited Post: 1 to 3 working days",
-          "regularShipping": "Regular Post: 6 to 8 working days",
-          "timeDisclaimer": "Delivery times depend on your location and conditions. In case of any delays, we will inform you.",
-          "noticeTitle": "Notice:",
-          "contactInfo": "If you have any questions or need more information, please contact us so we can assist you.",
-          
-            
-              "links": "Links",
-             
-              "products": "Products",
-              
-              "contact": "Contact Us",
-              
-              "contactInfo_footer": "Contact Information",
-              "phone": "Phone",
-              "email": "Email",
-              "rights": "All rights reserved for Respect store",
-              
-                "subscribeNow": "Subscribe Now",
-                "newsletterInfo": "Stay updated with the latest news, discounts, and special offers.",
-                "enterEmail": "Enter your email",
-                "subscribe": "Subscribe",
-                "privacyPolicy": "We respect your privacy and will only use your email for sending useful information",
-                
-                  "relatedProducts": "Related",
-                  
-                    "currency": "Toman",
-                    
-                      "addedSuccess": "Product successfully added to the cart!",
-                      
-                        
-                          "title1": "About",
-                          "title2": "Us",
-                          "description1": "We create unique handmade products with love and care. From the very beginning, our goal has been to bring a sense of peace and beauty to your homes. Every product we make is crafted with attention to detail and the best materials.",
-                          "description2": "Our team is made up of motivated and creative individuals, each contributing with passion and energy to create products that not only bring you beauty but also enrich your daily life with good feelings and tranquility.",
-                          "goalTitle": "Our Goal",
-                          "goalDescription": "We believe in quality, innovation, and respect for the environment, and we strive to provide you with not just excellent products, but a unique experience using natural materials and sustainable processes.",
-                          "whyChoose": {
-                            "title1": "Why",
-                            "title2": "Choose Us"
-                          },
-                          "qualityGuarantee": {
-                            "title": "Quality Guarantee:",
-                            "description": "We carefully select and review each product to ensure it meets our high-quality standards."
-                          },
-                          "convenience": {
-                            "title": "Convenience:",
-                            "description": "With a simple user interface and a hassle-free ordering process, shopping has never been this easy."
-                          },
-                          "excellentCustomerService": {
-                            "title": "Excellent Customer Service:",
-                            "description": "Our dedicated and professional team is always ready to assist you to ensure your satisfaction is our top priority."
-                          },
-                          
-                            "delivery": {
-                              "title1": "Delivery Time and",
-                              "title2": "Shipping Method",
-                              "shippingMethod": {
-                                "title": "Shipping Method",
-                                "description": "Your products will be shipped via expedited mail or regular mail. Depending on the type of product and your choice, we will offer the best shipping method."
-                              },
-                              "deliveryTime": {
-                                "title": "Delivery Time",
-                                "details": "- Expedited Mail: 1 to 3 business days\n- Regular Mail: 6 to 8 business days\nThe above times depend on your conditions and address. In case of any delays, we will inform you."
-                              },
-                              "note": {
-                                "title": "Note:",
-                                "description": "If you have any questions or need more information, please contact us for assistance."
-                              }
-                            
-                          },
-                          
-                          
-                            
-                              "yourCart": "Your",
-                              "title": " Purchase",
-                              "remove": "Remove",
-                              "continueShopping": "Continue Shopping",
-                              
-                                  "text1": "All",
-                                  "text2": "Products",
-                               
-                                "categories": {
-                                  "ghalami": "Category: Pencil Candle",
-                                  "sangi": "Category: Stone Candle"
-                                },
-                                
-                                  "contact": "Contact",
-                                  "us": "Us",
-                                  "customer_relationship": "We believe in connecting with our customers and building a close relationship with them. Our goal is to stay in touch with you and pay attention to your needs and feedback.",
-                                  "contact_information": "Contact Information",
-                                  "tel": "Tel: 09353176649",
-                                  "emailContact": "Email: mino.khosravi2025@gmail.com",
-                                  "response_time": "Response Time: 10 AM to 6 PM",
-                                  "questions": "If you have any questions or need assistance, please contact us. Our team is always ready to assist you.",
-                                  "your_name": "Your Name",
-                                  "your_email": "Your Email",
-                                  "write_your_message": "Write your message here",
-                                  "enter_your_message": "Enter your message",
-                                  "submit": "Submit",
-                                  "enter_your_name": "Enter your name",
-                                  "enter_your_email": "Enter your email",
-                                  
-                                    "login": "Login",
-                                    "register": "Sign up",
-                                    "name_placeholder": "Name",
-                                    "email_placeholder": "Email",
-                                    "password_placeholder": "Password",
-                                    "forgot_password": "Forgot your password?",
-                                    "create_account": "Don't have an account? Sign up",
-                                    "login_to_account": "Already have an account? Login",
-                                    "login_button": "Login",
-                                    "register_button": "Create account",
-                                    
-                                    "my_orders": "My ",
-                                    "ordersMe": "Orders",
-                                    "quantity": "Quantity",
-                                    "ready_to_ship": "Ready to Ship",
-                                    "track_order": "Track Order",
-                                    
-                                      "provinces": [
-                                        "Tehran",
-                                        "West Azerbaijan",
-                                        "East Azerbaijan",
-                                        "Isfahan",
-                                        "Bushehr",
-                                        "Chabahar",
-                                        "South Khorasan",
-                                        "Razavi Khorasan",
-                                        "Khuzestan",
-                                        "Zanjan",
-                                        "Semnan",
-                                        "Sistan and Baluchestan",
-                                        "Fars",
-                                        "Qazvin",
-                                        "Qom",
-                                        "Kurdistan",
-                                        "Kerman",
-                                        "Kermanshah",
-                                        "Golestan",
-                                        "Gilan",
-                                        "Lorestan",
-                                        "Mazandaran",
-                                        "Hormozgan",
-                                        "Hamadan",
-                                        "Yazd"
-                                      ],
-                                      "tehran_counties": [
-                                        "Tehran",
-                                        "Shahriar",
-                                        "Damavand",
-                                        "Baharestan",
-                                        "Pardis",
-                                        "Pishva",
-                                        "Firuzkuh",
-                                        "Sokhanrani",
-                                        "Varamin",
-                                        "Islamshahr",
-                                        "Malard",
-                                        "Shahr-e-Rey",
-                                        "Robat Karim",
-                                        "Qarchak",
-                                        "Shahr-e-Qods",
-                                        "Savojbolagh",
-                                        "Shahriyar"
-                                      ],
-                                      "select_province": "Select Province",
-                                      "select_city": "Select City",
-                                      "first_name": "First Name",
-                                      "last_name": "Last Name",
-                                      "email_address": "Email Address (Optional)",
-                                      "full_address": "Full Address",
-                                      "postal_code": "Postal Code",
-                                      "phone": "Phone",
-                                      "shipping_info": "Shipping",
-                                      "info": "Info",
-                                      "payment_method": "Payment Method",
-                                      "method": "Method",
-                                      "secure_payment": "Secure Payment",
-                                      "place_order": "Place Order",
-                                      
-                                        "product": {
-                                          "add_to_cart": "Add to Cart",
-                                          "handmade_description": "Our candles are 100% handmade and natural.",
-                                          "return_policy": "Easy return and exchange policy within 7 days.",
-                                          "description": "Description",
-                                          
-                                           "products_description": "Our products include a variety of scented and decorative candles that are suitable for any occasion."
-                                        }
-                                        
-                                         
-                                          
-                                        
-                                      
-                                    
+      "title": "Shipping Method",
+      "description": "Your products will be shipped via expedited mail or regular mail. Depending on the type of product and your choice, we will offer the best shipping method."
+    },
+    "deliveryTime": {
+      "title": "Delivery Time",
+      "details": "- Expedited Mail: 1 to 3 business days\n- Regular Mail: 6 to 8 business days\nThe above times depend on your conditions and address. In case of any delays, we will inform you."
+    },
+    "note": {
+      "title": "Note:",
+      "description": "If you have any questions or need more information, please contact us for assistance."
+    }
+  },
+
+  "yourCart": "Your",
+  "title": " Purchase",
+  "remove": "Remove",
+  "continueShopping": "Continue Shopping",
+
+  "text1": "All",
+  "text2": "Products",
+
+  "categories": {
+    "ghalami": "Category: Pencil Candle",
+    "sangi": "Category: Stone Candle"
+  },
+
+  "contact": "Contact",
+  "us": "Us",
+  "customer_relationship": "We believe in connecting with our customers and building a close relationship with them. Our goal is to stay in touch with you and pay attention to your needs and feedback.",
+  "contact_information": "Contact Information",
+  "tel": "Tel: 09353176649",
+  "emailContact": "Email: mino.khosravi2025@gmail.com",
+  "response_time": "Response Time: 10 AM to 6 PM",
+  "questions": "If you have any questions or need assistance, please contact us. Our team is always ready to assist you.",
+  "your_name": "Your Name",
+  "your_email": "Your Email",
+  "write_your_message": "Write your message here",
+  "enter_your_message": "Enter your message",
+  "submit": "Submit",
+  "enter_your_name": "Enter your name",
+  "enter_your_email": "Enter your email",
+
+  "login": "Login",
+  "register": "Sign up",
+  "name_placeholder": "Name",
+  "email_placeholder": "Email",
+  "password_placeholder": "Password",
+  "forgot_password": "Forgot your password?",
+  "create_account": "Don't have an account? Sign up",
+  "login_to_account": "Already have an account? Login",
+  "login_button": "Login",
+  "register_button": "Create account",
+
+  "my_orders": "My ",
+  "ordersMe": "Orders",
+  "quantity": "Quantity",
+  "ready_to_ship": "Ready to Ship",
+  "track_order": "Track Order",
+
+  "provinces": [
+    "Tehran",
+    "West Azerbaijan",
+    "East Azerbaijan",
+    "Isfahan",
+    "Bushehr",
+    "Chabahar",
+    "South Khorasan",
+    "Razavi Khorasan",
+    "Khuzestan",
+    "Zanjan",
+    "Semnan",
+    "Sistan and Baluchestan",
+    "Fars",
+    "Qazvin",
+    "Qom",
+    "Kurdistan",
+    "Kerman",
+    "Kermanshah",
+    "Golestan",
+    "Gilan",
+    "Lorestan",
+    "Mazandaran",
+    "Hormozgan",
+    "Hamadan",
+    "Yazd"
+  ],
+  "tehran_counties": [
+    "Tehran",
+    "Shahriar",
+    "Damavand",
+    "Baharestan",
+    "Pardis",
+    "Pishva",
+    "Firuzkuh",
+    "Sokhanrani",
+    "Varamin",
+    "Islamshahr",
+    "Malard",
+    "Shahr-e-Rey",
+    "Robat Karim",
+    "Qarchak",
+    "Shahr-e-Qods",
+    "Savojbolagh",
+    "Shahriyar"
+  ],
+  "select_province": "Select Province",
+  "select_city": "Select City",
+  "first_name": "First Name",
+  "last_name": "Last Name",
+  "email_address": "Email Address (Optional)",
+  "full_address": "Full Address",
+  "postal_code": "Postal Code",
+  "phone": "Phone",
+  "shipping_info": "Shipping",
+  "info": "Info",
+  "payment_method": "Payment Method",
+  "method": "Method",
+  "secure_payment": "Secure Payment",
+  "place_order": "Place Order",
+
+  "product": {
+    "add_to_cart": "Add to Cart",
+    "handmade_description": "Our candles are 100% handmade and natural.",
+    "return_policy": "Easy return and exchange policy within 7 days.",
+    "description": "Description",
+
+    "products_description": "Our products include a variety of scented and decorative candles that are suitable for any occasion."
+  },
+  
+  "b2b_title": "Bulk Orders",
+  "b2b_intro": "If you’re interested in placing a bulk order for our candles or stoneware (for events, gifts, stores, or B2B collaboration), we’d love to hear from you 💛",
+  "b2b_tips_title": "📌 Important Notes About Bulk Orders:",
+  "b2b_tips_1": "Minimum order quantity: starting from 10 pieces (negotiable depending on product).",
+  "b2b_tips_2": "You can choose between paraffin or soy wax candles with your preferred color and scent.",
+  "b2b_tips_3": "Stoneware containers are available in a variety of colors.",
+  "b2b_tips_4": "Preparation time: typically 7-10 business days depending on the design and quantity.",
+  "b2b_tips_5": "Final pricing depends on quantity, model, material, and delivery time.",
+  "b2b_contact_title": "📞 For a price list or consultation, please contact us via one of the following channels:",
+  "b2b_contact_telegram": "Telegram",
+  "b2b_contact_whatsapp": "WhatsApp",
+  "b2b_contact_instagram": "Instagram Direct",
+
+  
+  "footer_support": "24/7 Support",
+  "footer_shipping_fast": "Express Shipping",
+  "complaints": "Complaints",
+  "terms": "Terms & Conditions",
+  "customerNote": {
+  "title": "Additional Notes",
+  "description": "If you have any special requests about delivery time, packaging, or notes for the seller, please enter them below.",
+  "placeholder": "Write your note here..."
+}
+,
+
+"additional_notes_title": "Additional Notes",
+"additional_notes_placeholder": "If you have any requests about delivery time, courier coordination, or packaging, write them here..."
+,
+"product": {
+  "description": "Product Description",
+  "your_review": "Your Review",
+  "write_review": "Write your comment",
+  "submit_review": "Submit Review",
+  "no_reviews": "No reviews yet.",
+  "bulk_gift_info": "For bulk or gift orders, the minimum quantity is 10 candles.",
+  "price": "Price",
+  "add_to_cart": "Add to Cart",
+
+
+  "products_description": "Handmade candles with unique designs and amazing scents.\nOur candles are available in two types of materials:\nHigh-quality paraffin or natural soy wax – the choice is yours!\nCandles made with soy wax are slightly more expensive than paraffin due to their natural origin and higher quality.\nThe color of the candles can be customized to your preference.\nAvailable with pleasant and natural fragrances.\nYou can order single pieces or in bulk.\nHandmade containers made of artificial stone with a unique texture and minimal design – perfect for home décor or as a gift.\nAvailable in your desired color.\nOffered both individually and in bulk.\nPreparation time: 7 to 10 working days."
+,
+  "preparation_time": "Preparation time",
+  "working_days": "working days",
+  "choose_color": "Choose color",
+  "enter_color": "Enter your preferred color",
+  "choose_scent": "Choose scent",
+  "select_scent": "Select scent",
+  "scents": {
+    "coconut": "Coconut",
+    "cinnamon": "Cinnamon",
+    "vanilla": "Vanilla",
+    "chocolate": "Chocolate",
+    "cookie": "Cookie",
+    "lavender": "Lavender",
+    "coffee": "Coffee",
+    "lemon": "Lemon"
+  }
+}
+
+
+,
+  
+  "terms_title_1": "Terms and",
+  "terms_title_2": "Conditions",
+
+  "terms.intro": "Dear user, please read the following terms carefully before using Respect’s services. Entering the website respects.ir and using any of its features means you are aware of and accept all the rules and terms. Registering any order also implies full acceptance of these terms.",
+
+  "terms.section1_title": "1 – Definitions",
+  "terms.section1_desc": "According to e-commerce law, the following definitions are used throughout this document:",
+  "terms.section1_1": "1.1 – Store: The online store respects.ir acting as the seller.",
+  "terms.section1_2": "1.2 – Website: The Respect online store available at www.respects.ir.",
+  "terms.section1_3": "1.3 – Website content: All information such as prices, texts, images, videos, product specifications, and articles posted on the website.",
+  "terms.section1_4": "1.4 – Guest user: Any individual visiting the website via the Internet.",
+  "terms.section1_5": "1.5 – Member: Any person who registers on the website with verifiable identity information.",
+  "terms.section1_6": "1.6 – Customer: A user or member who purchases from the website.",
+  "terms.section1_7": "1.7 – Order: The item(s) selected and submitted by the customer for purchase.",
+
+  "terms.section2_title": "2 – Contract Formation and Sale",
+  "terms.section2_desc": "Online purchases are considered legal contracts. Placing any order means you have read and accepted these terms in full.",
+
+  "terms.section3_title": "3 – Electronic Communication",
+  "terms.section3_desc": "When you use respects.ir services, communication occurs electronically, and you agree to receive messages via email or SMS. The email and phone number registered in your profile are the only official contact points. For marketing updates or promotions, respects.ir may send messages, which you can cancel by replying 'off'. The only official contact domain is www.respects.ir.",
+
+  "terms.section4_title": "4 – Order and Purchase Process",
+  "terms.section4_desc": "Users can view and order products without registration, but creating an account simplifies future purchases and allows you to receive offers. Respect guarantees that all personal information will remain secure and only be used for communication purposes.",
+  "terms.section4_extra": "This document supersedes all previous terms and agreements."
+,
+  "gifts.title1": "Custom",
+  "gifts.title2": "Gifts",
+  "gifts.intro_title": "Overview",
+  "gifts.intro_text": "🎁 We accept custom gift and candle orders! Looking for a unique, personalized gift with your own style? You’re in the right place. Get inspired by our presets or order your own color, design and text.",
+  "gifts.how_title": "How to order?",
+  "gifts.how_1": "Contact us via the available channels.",
+  "gifts.how_2": "Send a reference photo/sample if you have one.",
+  "gifts.how_3": "Tell us your preferred color, design and text (font/style if needed).",
+  "gifts.how_4": "Specify quantity and your desired delivery date.",
+  "gifts.ideas_title": "Where to get ideas?",
+  "gifts.ideas_1": "Browse our ready gift sets to get inspired.",
+  "gifts.ideas_2": "If you have an event theme (color palette, logo, wedding, birthday, corporate), share it and we’ll suggest the best combo.",
+  "gifts.ideas_3": "Want special vessels or packaging? Describe it and we’ll review and send similar options.",
+  "gifts.custom_title": "Customizable options",
+  "gifts.custom_1": "Candle & vessel color/material / finish",
+  "gifts.custom_2": "Surface design of candles & vessels",
+  "gifts.custom_3": "Text or logo on candle / gift tag",
+  "gifts.custom_4": "Packaging (box, ribbon, custom greeting card, …)",
+  "gifts.custom_5": "Sizes and quantities in gift packs",
+  "gifts.important_title": "Important notes (time & conditions)",
+  "gifts.important_1": "Custom work takes time; allow at least 7–14 business days (may vary by volume/complexity).",
+  "gifts.important_2": "For large orders (20+ items) or tight deadlines, contact earlier.",
+  "gifts.important_3": "Changes after final approval may add time/cost.",
+  "gifts.price_title": "Pricing, MOQ & payment",
+  "gifts.price_1": "Pricing depends on size, embellishments, packaging and quantity. For an exact quote, send: model + qty + packaging.",
+  "gifts.price_2": "Minimum order is usually 5+ items (varies by model).",
+  "gifts.price_3": "Payment: bank transfer or online payment (details after coordination).",
+  "gifts.delivery_title": "Packaging, shipping & pickup",
+  "gifts.delivery_1": "Gifts are packaged nicely, with option for a custom greeting card.",
+  "gifts.delivery_2": "Shipping via post/courier is available — shipping cost is separate.",
+  "gifts.delivery_3": "Express shipping or local pickup may be arranged where possible.",
+  "gifts.consult_title": "Free consultation before ordering",
+  "gifts.consult_text": "Not sure what fits your event or gift? Send venue photos, color theme or style and we’ll suggest practical options.",
+  "gifts.cancel_title": "Cancellation & changes",
+  "gifts.cancel_1": "Major changes after final approval may not be possible or may incur extra cost.",
+  "gifts.cancel_2": "If canceled after production starts, part of the fee will be deducted for materials and labor.",
+  "gifts.cta.instagram": "Instagram",
+  "gifts.cta.telegram": "Telegram",
+  "gifts.cta.whatsapp": "WhatsApp"
 }

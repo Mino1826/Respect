@@ -14,6 +14,40 @@ const ShopContextProvider = (props) => {
     const [search, setSearch] = useState('');
     const [showSearch, setShowSearch] = useState(false);
     const [cartItems, setCartItems] = useState({});
+    const [checkoutNote, setCheckoutNote] = useState("");        // 👈 توضیحات مشتری
+    const [shippingMethod, setShippingMethod] = useState("cod"); // اگر روش پرداخت/ارسال داری
+    const [address, setAddress] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    fullAddress: "",
+    province: "",
+    city: "",
+    postalCode: "",
+    phone: "",
+  });
+
+  const createOrder = async (payload) => {
+    const res = await fetch("/api/orders", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+    if (!res.ok) {
+      const txt = await res.text();
+      throw new Error(txt || "Order creation failed");
+    }
+    return res.json();
+  };
+
+  const value1 = {
+    // مقادیر قبلی …
+    checkoutNote, setCheckoutNote,
+    shippingMethod, setShippingMethod,
+    address, setAddress,
+    createOrder, // در صورت نداشتن API فعلاً می‌تونی موک کنی
+    navigate: (path) => window.location.assign(path),
+  };
     
     const navigate = useNavigate();
     const addToCart = async (itemId) => {
@@ -60,6 +94,7 @@ const ShopContextProvider = (props) => {
         return totalAmount;
     };
 
+
     const value = {
         products,
         currency,
@@ -74,6 +109,7 @@ const ShopContextProvider = (props) => {
         updateQuantity,
         getCartAmount,
         navigate,
+        value1
         
     };
 
@@ -85,3 +121,4 @@ const ShopContextProvider = (props) => {
 };
 
 export default ShopContextProvider;
+

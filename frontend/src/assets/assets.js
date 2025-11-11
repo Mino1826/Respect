@@ -26,8 +26,10 @@ import star_icon from "./star_icon.png";
 import support_img from "./support_img.png";
 import menu_icon from "./menu_icon.png";
 import aboutHome from "./aboutHome.jpg";
-import about from "./about.png";
+
 import contact from "./contact_us.jpg";
+import delivery from './delivery.jpg';
+import support from './support.png';
 
 
 
@@ -47,8 +49,9 @@ export const assets = {
   support_img,
   menu_icon,
   aboutHome,
-  about,
-  contact
+  contact,
+  delivery,
+  support
 };
 
 
@@ -57,8 +60,8 @@ export const products = [
     _id: "aaaaa",
     name: "شمع",
     description:
-      "این شمع دست‌ساز با عشق و دقت ساخته شده و از بهترین مواد طبیعی تهیه شده است",
-    price: 100,
+      "",
+    price: 100000,
     image: [p_img1],
     category: "new",
     subCategory: "sangi",
@@ -69,8 +72,8 @@ export const products = [
     _id: "aaaab",
     name:"شمع",
     description:
-      "این شمع دست‌ساز با عشق و دقت ساخته شده و از بهترین مواد طبیعی تهیه شده است",
-    price: 200,
+      "",
+    price: 100000,
     image: [p_img2],
     category: "new",
     subCategory: "ghalami",
@@ -81,8 +84,8 @@ export const products = [
     _id: "aaaac",
     name: "شمع",
     description:
-      "این شمع دست‌ساز با عشق و دقت ساخته شده و از بهترین مواد طبیعی تهیه شده است",
-    price: 220,
+      "",
+    price: 100000,
     image: [p_img3],
     category: "new",
     subCategory: "sangi",
@@ -93,8 +96,8 @@ export const products = [
     _id: "aaaad",
     name: "شمع",
     description:
-      "این شمع دست‌ساز با عشق و دقت ساخته شده و از بهترین مواد طبیعی تهیه شده است",
-    price: 110,
+      "",
+    price: 100000,
     image: [p_img4],
     category: "new",
     subCategory: "sangi",
@@ -105,8 +108,8 @@ export const products = [
     _id: "aaaae",
     name: "شمع",
     description:
-      "این شمع دست‌ساز با عشق و دقت ساخته شده و از بهترین مواد طبیعی تهیه شده است",
-    price: 130,
+    "",
+    price: 100000,
     image: [p_img5],
     category: "old",
     subCategory: "sangi",
@@ -117,8 +120,8 @@ export const products = [
     _id: "aaaaf",
     name: "شمع",
     description:
-      "این شمع دست‌ساز با عشق و دقت ساخته شده و از بهترین مواد طبیعی تهیه شده است",
-    price: 140,
+      "",
+    price: 100000,
     image: [p_img6],
     category: "old",
     subCategory: "sangi",
@@ -129,8 +132,8 @@ export const products = [
     _id: "aaaag",
     name: "شمع",
     description:
-      "این شمع دست‌ساز با عشق و دقت ساخته شده و از بهترین مواد طبیعی تهیه شده است",
-    price: 190,
+      "",
+    price: 100000,
     image: [p_img7],
     category: "old",
     subCategory: "sangi",
@@ -141,8 +144,8 @@ export const products = [
     _id: "aaaah",
     name: "شمع",
     description:
-      "این شمع دست‌ساز با عشق و دقت ساخته شده و از بهترین مواد طبیعی تهیه شده است",
-    price: 140,
+      "",
+    price: 100000,
     image: [p_img8],
     category: "old",
     subCategory: "ghalami",
@@ -153,8 +156,8 @@ export const products = [
     _id: "aaaai",
     name: "شمع",
     description:
-      "این شمع دست‌ساز با عشق و دقت ساخته شده و از بهترین مواد طبیعی تهیه شده است",
-    price: 100,
+      "",
+    price: 100000,
     image: [p_img9],
     category: "old",
     subCategory: "ghalami",
@@ -165,8 +168,8 @@ export const products = [
     _id: "aaaaj",
     name: "شمع",
     description:
-      "این شمع دست‌ساز با عشق و دقت ساخته شده و از بهترین مواد طبیعی تهیه شده است",
-    price: 110,
+      "",
+    price: 100000,
     image: [p_img10],
     category: "old",
     subCategory: "ghalami",
@@ -177,8 +180,8 @@ export const products = [
     _id: "aaaaj",
     name: "شمع",
     description:
-      "این شمع دست‌ساز با عشق و دقت ساخته شده و از بهترین مواد طبیعی تهیه شده است",
-    price: 110,
+      "",
+    price: 100000,
     image: [p_img11],
     category: "old",
     subCategory: "sangi",
@@ -189,8 +192,8 @@ export const products = [
     _id: "aaaaj",
     name: "شمع",
     description:
-      "این شمع دست‌ساز با عشق و دقت ساخته شده و از بهترین مواد طبیعی تهیه شده است",
-    price: 110,
+      "",
+    price: 100000,
     image: [p_img12],
     category: "old",
     subCategory: "ghalami",
@@ -201,8 +204,8 @@ export const products = [
     _id: "aaaaj",
     name: "شمع",
     description:
-      "این شمع دست‌ساز با عشق و دقت ساخته شده و از بهترین مواد طبیعی تهیه شده است",
-    price: 110,
+      "",
+    price: 100000,
     image: [p_img13],
     category: "old",
     subCategory: "ghalami",

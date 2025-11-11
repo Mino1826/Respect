@@ -4,6 +4,7 @@ import Title from "../Components/Title";
 import { assets } from "../assets/assets";
 import CartTotal from "../Components/CartTotal";
 import { useTranslation } from 'react-i18next'; 
+import Orders from "./Orders";
 
 const Cart = () => {
   const { t } = useTranslation(); 
@@ -36,9 +37,13 @@ const Cart = () => {
     <div className="bg-customGray border-t pt-14">
       <div className="flex justify-center text-2xl mb-3">
         <Title text1={t("yourCart")} text2={t("title")} />
+       
+      </div>
+      <div>
+      {<Orders/>}
       </div>
 
-      <div>
+      <div >
         {cartData.map((item, index) => {
           const productData = products.find(
             (product) => product._id === item._id
@@ -91,7 +96,7 @@ const Cart = () => {
         })}
       </div>
 
-      <div className="flex flex-col">
+      <div className="flex justify-center">
         <div className="w-full sm:w-[450px]">
           <CartTotal />
           <div className="w-full text-end">
