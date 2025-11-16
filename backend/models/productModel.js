@@ -11,9 +11,9 @@ const productSchema = new mongoose.Schema(
       subCategory: { type: String, required: true },
       bestseller:{ type: Boolean },
       date:{ type: Number, default: Date.now},
-      length:{ type: Number, required: true },
-      width:{ type: Number, required: true },
-      height:{ type: Number, required: true }
+      length:{ type: Number },
+      width:{ type: Number},
+      height:{ type: Number}
     },
     { minimize: false }
   );

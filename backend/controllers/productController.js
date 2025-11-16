@@ -3,9 +3,21 @@ import productModel from "../models/productModel.js";
 
 // add product
 export const addProduct = async (req, res) => {
+  console.log("BODY:", req.body);
+console.log("FILES:", req.files);
+
   try {
-  
-    const { name, description, price, category, subCategory, bestseller, width, height, length } = req.body;
+    const {
+      name,
+      description,
+      price,
+      category,
+      subCategory,
+      bestseller,
+      width,
+      height,
+      length,
+    } = req.body;
 
     // اگر با multer.fields آپلود کردی، فایل‌ها تو req.files میان
     const image1 = req.files?.image1?.[0];
@@ -42,11 +54,12 @@ export const addProduct = async (req, res) => {
     const product = new productModel(productData);
     await product.save();
 
-    return res.status(201).json({ success: true, message: "product added", product });
+    return res
+      .status(201)
+      .json({ success: true, message: "product added", product });
   } catch (error) {
     console.error(error);
     return res.status(500).json({ success: false, message: error.message });
-
   }
 };
 
@@ -64,8 +77,11 @@ export const listProducts = async (req, res) => {
 // remove product
 export const removeProduct = async (req, res) => {
   try {
-    const { id } = req.body;           // چون روتت POST /remove هست
-    if (!id) return res.status(400).json({ success: false, message: "id is required" });
+    const { id } = req.body; // چون روتت POST /remove هست
+    if (!id)
+      return res
+        .status(400)
+        .json({ success: false, message: "id is required" });
 
     await productModel.findByIdAndDelete(id);
     return res.json({ success: true, message: "product removed" });
@@ -78,11 +94,17 @@ export const removeProduct = async (req, res) => {
 // single product info
 export const singleProduct = async (req, res) => {
   try {
-    const { id } = req.body;           // روتت POST /single هست؛ اگر GET گرفتی از req.params.id بگیر
-    if (!id) return res.status(400).json({ success: false, message: "id is required" });
+    const { id } = req.body; // روتت POST /single هست؛ اگر GET گرفتی از req.params.id بگیر
+    if (!id)
+      return res
+        .status(400)
+        .json({ success: false, message: "id is required" });
 
     const product = await productModel.findById(id);
-    if (!product) return res.status(404).json({ success: false, message: "product not found" });
+    if (!product)
+      return res
+        .status(404)
+        .json({ success: false, message: "product not found" });
 
     return res.json({ success: true, product });
   } catch (error) {
@@ -90,4 +112,3 @@ export const singleProduct = async (req, res) => {
     return res.status(500).json({ success: false, message: error.message });
   }
 };
-
