@@ -11,13 +11,15 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 const BestSeller = () => {
-  const { products,toggleLanguage } = useContext(ShopContext);
-  const [latestProducts, setLatestProducts] = useState([]);
+  const { products, toggleLanguage } = useContext(ShopContext);
+  const [bestProducts, setBestProducts] = useState([]);
   const { t } = useTranslation(); 
 
   useEffect(() => {
-    const newProducts = products.filter(product => product.category === "new");
-    setLatestProducts(newProducts.slice(0, 6));
+    // فقط محصولاتی که bestseller=true هستند
+    const filtered = products.filter(p => p.bestseller === true);
+    // اگر خواستی محدودش کنی:
+    setBestProducts(filtered.slice(0, 6));
   }, [products]);
 
   return (
@@ -28,11 +30,12 @@ const BestSeller = () => {
           {t('bestseller_description')} 
         </p>
       </div>
+
       <Swiper
         className="w-[90%] h-[80%] mx-auto"
         breakpoints={{
           640: { slidesPerView: 3 },
-          0: { slidesPerView: 1 }
+          0: { slidesPerView: 1 },
         }}
         modules={[Navigation, Pagination]}
         navigation={{ clickable: true }}
@@ -40,17 +43,20 @@ const BestSeller = () => {
         spaceBetween={40}
         loop={true}
       >
-        {
-          latestProducts.length > 0 ? (
-            latestProducts.map((item, index) => (
-              <SwiperSlide key={index} className="flex justify-center ">
-                <ProductItem id={item._id} image={item.image} name={item.name[toggleLanguage]} price={item.price} />
-              </SwiperSlide>
-            ))
-          ) : (
-            <p className="text-center text-lg">{t('no_product')}</p> 
-          )
-        }
+        {bestProducts.length > 0 ? (
+          bestProducts.map((item) => (
+            <SwiperSlide key={item._id} className="flex justify-center ">
+              <ProductItem
+                id={item._id}
+                image={item.image}                     // ProductItem خودش image[0] رو هندل می‌کنه
+                name={item.name[toggleLanguage]}       // چون name بر اساس زبان آبجکت است
+                price={item.price}
+              />
+            </SwiperSlide>
+          ))
+        ) : (
+          <p className="text-center text-lg">{t('no_product')}</p>
+        )}
       </Swiper>
     </div>
   );

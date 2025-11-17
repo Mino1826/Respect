@@ -26,6 +26,12 @@ const Add = ({token}) => {
   const onSubmitHandler = async (e)=> {
     e.preventDefault();
 
+    if (!category || !subCategory) {
+      toast.error("لطفاً دسته‌بندی و زیر دسته را انتخاب کنید");
+      return;
+    }
+    
+
     try {
       const formData= new FormData()
 
@@ -111,23 +117,31 @@ const Add = ({token}) => {
           <div className='flex flex-col sm:flex-row gap-2 w-full sm:gap-8'>
             <div>
               <p className='mb-2'>دسته بندی</p>
-              <select onChange={(e)=>setCategory(e.target.value)} className='w-full px-3 py-2'>
-                <option value="شمع">شمع</option>
-                <option value="ظروف سنگی">ظروف سنگی</option>
-                <option value="پک هدیه">پک هدیه</option>
-                <option value="هفت سین">هفت سین</option>
-                <option value="ست">ست</option>
-              </select>
-            </div>
-            <div>
-              <p className='mb-2'>زیر دسته</p>
-              <select onChange={(e)=>setSubCategory(e.target.value)} className='w-full px-3 py-2'>
-                <option value="قلمی">قلمی</option>
-                <option value="شات شمع">شات شمع </option>
-                <option value="گلدان">گلدان </option>
-                <option value="جاشمعی">جاشمعی </option>
-                
-              </select>
+              <select
+  value={category}
+  onChange={(e) => setCategory(e.target.value)}
+  className="w-full px-3 py-2"
+>
+  <option value="">انتخاب دسته‌بندی</option>
+  <option value="شمع">شمع</option>
+  <option value="ظروف سنگی">ظروف سنگی</option>
+  <option value="پک هدیه">پک هدیه</option>
+  <option value="هفت سین">هفت سین</option>
+  <option value="ست">ست</option>
+</select>
+
+<select
+  value={subCategory}
+  onChange={(e) => setSubCategory(e.target.value)}
+  className="w-full px-3 py-2"
+>
+  <option value="">انتخاب زیر دسته</option>
+  <option value="قلمی">قلمی</option>
+  <option value="شات شمع">شات شمع</option>
+  <option value="گلدان">گلدان</option>
+  <option value="جاشمعی">جاشمعی</option>
+</select>
+
             </div>
 
             <div>
@@ -156,7 +170,7 @@ const Add = ({token}) => {
             </div>
           </div>
           <div className='flex gap-2 mt-2'>
-            <input onChange={()=>setBestseller(prev =>!prev)} checked={bestseller} type="checkbox" id='bestseller' />
+            <input onChange={(e) =>setBestseller(e.target.checked)} checked={bestseller} type="checkbox" id='bestseller' />
             <label className='cursor-pointer' htmlFor="bestseller">افزودن به پرفروش ترین ها</label>
           </div>
           <button className='w-28 py-3 mt-4 bg-black text-white' type='submit'>افزودن</button>
