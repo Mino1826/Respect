@@ -38,8 +38,10 @@ const Product = () => {
   }, [productId, products]);
 
   const handleAddToCart = () => {
-    addToCart(productData._id);
+    if (!productData) return;
+    addToCart(productData._id, quantity);   // 👈 quantity رو پاس بده
   };
+  
 
   const handleSubmitReview = (e) => {
     e.preventDefault();

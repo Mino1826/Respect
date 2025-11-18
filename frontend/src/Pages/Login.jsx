@@ -1,14 +1,14 @@
 import React, { useEffect, useTransition } from "react";
 import { useState, useContext } from "react";
 import { ShopContext } from "../Context/ShopContext.jsx";
-import axios from "axios";
-import { t } from "i18next";
+import { useTranslation } from 'react-i18next'; 
 import { toast } from "react-toastify";
+import axios from "axios";
 
 const Login = () => {
-  const { t, i18n } = useTransition();
+  const { t, i18n } = useTranslation(); 
 
-  const [currentState, setCurrentState] = useState("ثبت نام");
+  const [currentState, setCurrentState] = useState("ورود");
   const {token, setToken, navigate, backendUrl} = useContext(ShopContext);
 
   const [name, setName] = useState("");
@@ -18,7 +18,7 @@ const Login = () => {
   const onSubmitHandler = async (event) => {
     event.preventDefault();
     try {
-      if (currentState === " ثبت نام") {
+      if (currentState === "ثبت نام") {
         const response = await axios.post(backendUrl + "/api/user/register", {
           name,
           password,
@@ -76,7 +76,7 @@ const Login = () => {
         value={name}
           type="text"
           className="w-full px-3 py-2 border border-gray-800"
-          placeholder="نام"
+          placeholder={t( "name_placeholder")}
           required
         />
       )}
@@ -86,7 +86,7 @@ const Login = () => {
       value={email}
         type="email"
         className="w-full px-3 py-2 border border-gray-800"
-        placeholder="ایمیل"
+        placeholder={t("email_placeholder")}
         required
       />
       <input
@@ -94,20 +94,20 @@ const Login = () => {
       value={password}
         type="password"
         className="w-full px-3 py-2 border border-gray-800"
-        placeholder="رمز عبور"
+        placeholder={t("password_placeholder")}
         required
       />
       <div className="w-full flex justify-between text-sm mt-[-8px]">
-        <p className="cursor-pointer">رمز عبور خود را فراموش کرده اید؟</p>
+        <p className="cursor-pointer">{t("create_account")}</p>
         {
           currentState === 'ورود' ? 
-          <p className="cursor-pointer" onClick={()=>setCurrentState('ثبت نام')}>ثبت نام</p>
-          : <p className="cursor-pointer" onClick={()=>setCurrentState('ورود')}>ورود</p>
+          <p className="cursor-pointer" onClick={()=>setCurrentState('ثبت نام')}>{t("register")}</p>
+          : <p className="cursor-pointer" onClick={()=>setCurrentState('ورود')}>{t("login")}</p>
         }
 
       </div>
       <button className="bg-black text-white font-light px-8 py-2 mt-4">
-        {currentState === 'ورود' ? ' ورود ' : ' ثبت نام'}
+        {currentState === 'ورود' ? t("login") : t("register")}
       </button>
     </form>
   );

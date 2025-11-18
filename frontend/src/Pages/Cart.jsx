@@ -16,22 +16,24 @@ const Cart = () => {
   const [cartData, setCartData] = useState([]);
 
   useEffect(() => {
-    const tempData = [];
-    for (const itemId in cartItems) {
-      for (const size in cartItems[itemId]) {
-        const quantity = cartItems[itemId][size];
+    if (products.length > 0) {
+      const tempData = [];
+  
+      for (const itemId in cartItems) {
+        const quantity = cartItems[itemId];
         if (quantity > 0) {
           tempData.push({
             _id: itemId,
-            size: size,
-            quantity: quantity,
+            quantity,
           });
         }
       }
+  
+      setCartData(tempData);
+      console.log("CART DATA >>>", tempData);
     }
-    setCartData(tempData);
-    console.log(tempData); 
-  }, [cartItems]);
+  }, [cartItems, products]);   // 👈 آرایه وابستگی هم این‌طوری درستشه
+  
 
   return (
     <div className="bg-customGray border-t pt-14">
@@ -39,9 +41,9 @@ const Cart = () => {
         <Title text1={t("yourCart")} text2={t("title")} />
        
       </div>
-      <div>
+      {/* <div>
       {<Orders/>}
-      </div>
+      </div> */}
 
       <div >
         {cartData.map((item, index) => {
